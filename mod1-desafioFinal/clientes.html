@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AmigoPet — Clientes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="logo" class="logo">
+      <span class="brand-title">AmigoPet</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Cadastro</a>
+      <a href="clientes.html" class="nav-link active">Clientes</a>
+      <a href="produtos.html" class="nav-link">Produtos</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="themeToggle" class="btn ghost">Tema</button>
+      <div class="cart-icon" title="Itens no carrinho">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="cartCount2" class="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container single-column">
+    <section class="card">
+      <div class="filters">
+        <input id="searchInput" placeholder="Buscar por tutor ou animal..." />
+        <select id="filtroPorte">
+          <option value="">Todos os portes</option>
+          <option>Pequeno</option>
+          <option>Médio</option>
+          <option>Grande</option>
+        </select>
+        <button id="ordenarData" class="btn ghost">Ordenar por data</button>
+      </div>
+    </section>
+
+    <section id="clientesGrid" class="grid"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeModal" class="close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

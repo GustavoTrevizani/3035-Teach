@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AmigoPet — Cadastro</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="logo" class="logo">
+      <span class="brand-title">AmigoPet</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link active">Cadastro</a>
+      <a href="clientes.html" class="nav-link">Clientes</a>
+      <a href="produtos.html" class="nav-link">Produtos</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="themeToggle" class="btn ghost">Tema</button>
+      <div class="cart-icon" title="Itens no carrinho">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="cartCount" class="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card form-card">
+      <h1>Cadastro de Tutor & Animal</h1>
+      <form id="cadastroForm" class="form">
+        <fieldset>
+          <legend>Tutor</legend>
+          <input id="nomeTutor" placeholder="Nome do tutor" required />
+          <input id="telefoneTutor" placeholder="Telefone (apenas números)" required />
+          <input id="enderecoTutor" placeholder="Endereço" required />
+          <label for="dataAtendimento">Data do Atendimento</label>
+          <input id="dataAtendimento" type="date" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Animal</legend>
+          <input id="nomeAnimal" placeholder="Nome do animal" required />
+          <input id="idadeAnimal" type="number" min="0" placeholder="Idade (anos)" required />
+          <select id="porteAnimal" required>
+            <option value="">Porte</option>
+            <option>Pequeno</option>
+            <option>Médio</option>
+            <option>Grande</option>
+          </select>
+          <input id="fotoAnimal" placeholder="URL da foto (opcional)" />
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Cadastrar</button>
+          <button type="button" id="limparClientes" class="btn ghost">Limpar todos</button>
+        </div>
+      </form>
+
+      <p class="hint">Dados salvos no <strong>localStorage</strong>. Vá em <em>Clientes</em> para ver os cards.</p>
+    </section>
+
+    <aside class="card stats-card">
+      <h2>Resumo</h2>
+      <div class="stats">
+        <div class="stat">
+          <strong id="totalClientes">0</strong>
+          <span>Clientes</span>
+        </div>
+        <div class="stat">
+          <strong id="totalAnimais">0</strong>
+          <span>Animais</span>
+        </div>
+        <div class="stat">
+          <strong id="proximosAtendimentos">0</strong>
+          <span>Atendimentos hoje</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

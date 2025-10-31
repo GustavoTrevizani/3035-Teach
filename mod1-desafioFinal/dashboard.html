@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AmigoPet — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="logo" class="logo">
+      <span class="brand-title">AmigoPet</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Cadastro</a>
+      <a href="clientes.html" class="nav-link">Clientes</a>
+      <a href="produtos.html" class="nav-link">Produtos</a>
+      <a href="dashboard.html" class="nav-link active">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="themeToggle" class="btn ghost">Tema</button>
+      <div class="cart-icon" title="Itens no carrinho">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="cartCount4" class="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Dashboard</h1>
+      <div class="stats">
+        <div class="stat">
+          <strong id="dashClientes">0</strong>
+          <span>Clientes</span>
+        </div>
+        <div class="stat">
+          <strong id="dashProdutos">0</strong>
+          <span>Produtos</span>
+        </div>
+        <div class="stat">
+          <strong id="dashCarrinho">0</strong>
+          <span>Itens no carrinho</span>
+        </div>
+      </div>
+      <p class="hint">Estatísticas geradas a partir do <code>localStorage</code>.</p>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
